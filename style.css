@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+:root{
+    --color-01: #618C56;
+    --color-01-02: rgba(97, 140, 86, 0.5);
+    --color-02: #ffffff;
+    --color-03: #23341e;
+    --color-03-02: rgba(35, 52, 30, 0.8);
+    --color-04: #fcd669;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    transition: .25s;
+    box-sizing: border-box;
+    font-family: "Wendy One", sans-serif;
+}
+
+::-webkit-scrollbar{display: none;}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-03);
+    padding: 10px 100px;
+    z-index: 10;
+    display: flex;
+    border-bottom: 1px solid var(--color-01);
+}
+header img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+header ul{
+    margin-left: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+header ul li a{
+    font-size: 18px;
+    color: var(--color-01);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header ul li.active a, header ul li a:hover{
+    color: var(--color-04);
+    font-size: 19px;
+}
+
+.banner{
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--color-01);
+    padding: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-01);
+}
+.banner video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .25;
+}
+
+.banner__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background-color: var(--color-03-02);
+    border-radius: 100px;
+    padding: 50px;
+    z-index: 1;
+}
+.banner__img{
+    position: relative;
+    border-radius: 10px;
+    max-width: 250px;
+    max-height: 250px;
+    margin: auto 0;
+    border-radius: 25%;
+}
+.banner__text{
+    color: var(--color-01);
+    font-size: 22px;
+    line-height: 40px;
+    margin: auto 0;
+    text-align: justify;
+}
+.banner__text span{
+    color: var(--color-04);
+    font-size: 36px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-03);
+    letter-spacing: 2.5px;
+}
+
+
+body{
+    background-color: var(--color-03);
+    height: 500vh;
+}  
